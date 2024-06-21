@@ -1,0 +1,44 @@
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ajusta el espacio entre las imágenes según tus necesidades */
+    width: 100%;
+    max-width: 80vw;
+    justify-content: center; /* Centra la galería si es necesario */
+    align-items: center;
+	margin: auto;
+}
+.gallery img {
+    /*flex-basis: calc(25% - 100px);  Ajusta el 25% menos el gap para asegurar que se ajuste correctamente */
+    border-radius: 7%;
+	transform: scale(0.8);  /*Reduce el tamaño de las imágenes al 80% de su tamaño original */
+    transition: transform 0.3s ease-in-out;  /*Agrega una transición suave */
+}
+.img{
+    
+    width: 300px;
+    height: auto;
+
+}
+.container{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gallery img:hover {
+    transform: scale(1); /* Opcional: para que las imágenes vuelvan a su tamaño original al pasar el cursor */
+}
+
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 850px;
+}
+
+
+
+

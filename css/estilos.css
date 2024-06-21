@@ -1,0 +1,126 @@
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box !important;
+}
+html, body {
+    height: 100vh !important;
+    margin: 0 !important;
+    background-color: black !important;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    list-style-type: none !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+li a{
+    color: #8D4925 !important;
+    font-size: 20px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    padding-left: 15px !important;
+    /*display: inline-block !important;*/
+}
+li a:hover{
+    transform: scale(1.2) !important;
+    transition-duration: 1000ms !important;
+}
+/* DESPLEGABLE EN EL INDEX*/
+.menu{
+    list-style: none !important;
+    background-color: black !important;
+   
+}
+
+.menu li{
+    position: relative !important;
+    /*display: inline-block !important;*/
+}
+
+.menu li:hover ul{
+    display: block !important;
+}
+
+.menu ul{
+    display: none !important;
+    position: absolute !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 1 !important;
+}
+
+.menu ul li a, .menu li a{
+    display: block;
+    text-decoration: none;
+
+}
+
+/* DESPLEGABLE EN EL INDEX*/
+
+.principal {
+    position: relative !important;
+    height: 73vh !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.menu_bar{ 
+    background-color: black !important;
+    margin-right: 20px !important; 
+}
+
+.logo-bar{
+    width: 100% !important;
+    height: 12vh !important;
+    background-color: #8D4925 !important;
+    display: flex !important;
+    align-content: center !important;
+    justify-content: center !important;
+}
+
+footer{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	height: 5vh;
+}
+
+@media screen and (max-width: 600px){
+    .materialbox-caption{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .materialbox-caption{
+        width: 70%;
+    }
+}
+
+#desplegable {
+    display: none;
+    position: absolute;
+    /* Otras propiedades de estilo para el menú desplegable */
+}
+
+.social-media-container{
+    margin-top: 30px;
+    width: 15vw;
+    height: auto;
+    display: flex;
+	justify-content:space-around;
+	align-items:center;
+}
+.social-media-image{
+    width: 40px;
+    height: auto;
+}

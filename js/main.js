@@ -1,11 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const imgLightBox = document.querySelectorAll('.materialboxed');
-    M.Materialbox.init(imgLightBox, {
-        inDuration: 500,
-        outDuration: 500
-    });
-});
-
+//CARROUSEL
 document.addEventListener('DOMContentLoaded', () => {
     const elementosCarousel = document.querySelectorAll('.carousel');
     M.Carousel.init(elementosCarousel, {
@@ -44,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
+    //GALERÍA
     overlay.addEventListener('click', function() {
         const expandedImg = overlay.querySelector('.expanded-img');
         const caption = overlay.querySelector('.caption');
@@ -63,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
 });
-
 
 
 

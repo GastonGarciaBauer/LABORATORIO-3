@@ -1,11 +1,24 @@
-//CARROUSEL
 document.addEventListener('DOMContentLoaded', () => {
     const elementosCarousel = document.querySelectorAll('.carousel');
-    M.Carousel.init(elementosCarousel, {
-        duration: 450,
-        indicators: false
-    }); 
+
+    const iniciarCarousel = () => {
+        M.Carousel.init(elementosCarousel, {
+            duration: 450,
+            indicators: window.matchMedia("(max-width: 480px)").matches ? true : false,
+        });
+    };
+
+    iniciarCarousel();
+
+    window.addEventListener('resize', () => {
+        const instances = M.Carousel.getInstance(elementosCarousel);
+        if (instances) {
+            instances.destroy();
+        }
+        iniciarCarousel();
+    });
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const galleryItems = document.querySelectorAll('.gallery img');

@@ -4,11 +4,13 @@
     box-sizing: border-box !important;
 }
 html, body {
-    height: 100vh !important;
     margin: 0 !important;
     background-color: black !important;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+
 }
+
 ul{
     list-style-type: none !important;
     display: flex !important;
@@ -58,7 +60,7 @@ li a:hover{
 
 .principal {
 
-    height: 73vh !important;
+    height: 70vh !important;
     width: 100% !important;
     display: flex;
     justify-content: center;
@@ -76,7 +78,7 @@ li a:hover{
 }
 
 .logo-bar{
-    width: 100% !important;
+    width: 120% !important;
     height: 12vh !important;
     background-color: #8D4925 !important;
     display: flex !important;
@@ -86,12 +88,7 @@ li a:hover{
 .menu-button, #menu, .menu_input{
     display: none;
 }
-footer{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	height: 5vh;
-}
+
 
 
 #desplegable {
@@ -101,12 +98,20 @@ footer{
 }
 
 .social-media-container{
-    margin-top: 30px;
+    margin-top: -50px;
     width: 30vw;
     height: auto;
     display: flex;
 	justify-content:space-around;
 	align-items:center;
+}
+
+.derechos-reservados{
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 70vw;
+    height: auto;
+    color: #8D4925;    
 }
 .social-media-image{
     width: 40px;
@@ -120,6 +125,11 @@ footer{
     text-align: center;
     opacity: 0.8; /* Oculto inicialmente para animar su aparición */
     transition-duration: 20s;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
 }
 
 .caption.visible {
@@ -135,10 +145,229 @@ footer{
     color: #8D4925;
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ajusta el espacio entre las imágenes según tus necesidades */
+    width: 100%;
+    max-width: 80vw;
+    justify-content: center; /* Centra la galería si es necesario */
+    align-items: center;
+	margin: auto;
+}
+.gallery img {
+    /*flex-basis: calc(25% - 100px);  Ajusta el 25% menos el gap para asegurar que se ajuste correctamente */
+    border-radius: 7%;
+	transform: scale(0.8);  /*Reduce el tamaño de las imágenes al 80% de su tamaño original */
+    transition: transform 0.3s ease-in-out;  /*Agrega una transición suave */
+}
+.img{
+    
+    width: 300px;
+    height: auto;
 
 }
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+    flex-direction: column; /* Para alinear la imagen y la leyenda verticalmente */
+}
+#overlay img {
+    max-width: 50%;
+    max-height: 50%;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+.expanded-img {
+    transform: scale(0.8); /* Tamaño inicial más pequeño */
+}
+
+.expanded-img.expanded {
+    transform: scale(2); /* Tamaño expandido */
+    max-width: 90%;
+    max-height: 90%;
+}
+.container {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* Ajusta esta anchura según tus necesidades */
+}
+
+.gallery img:hover {
+    transform: scale(1); /* Opcional: para que las imágenes vuelvan a su tamaño original al pasar el cursor */
+}
+
+.titulo{
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 300px;
+    color: white;
+}
+
+.subtitulo{
+    margin-top: 350px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(58, 56, 56);
+    display: inline;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.descripcion{
+    color: rgb(197, 197, 197);
+    background-color: rgb(0, 0, 0);
+    width: 710px;
+    margin: 7px 0px;
+    font-size: 15px;
+    font-weight: 500;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+    font-family: 'Trebuchet MS', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: -20px;
+}
+
+.carousel {
+    width: 150%; /* Ajusta la anchura del carrusel según tus necesidades */
+    max-width: 800px; /* Puedes ajustar este valor para limitar el tamaño máximo del carrusel */
+    margin-left: 200px; /* Centra el carrusel horizontalmente */
+    position: relative; /* Necesario para el posicionamiento absoluto de los elementos */
+    margin-left: 30px;
+}
+
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 50%; /* Ajusta esta anchura según tus necesidades */
+    height: 110%;
+    position: absolute;
+}
+
+.carousel .carousel-item img{
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.carousel .indicators .indicator-item{
+    border-radius: 0px;
+    transform: rotate(45deg);
+    margin-left: 60px;
+    margin-bottom: 0px;
+    background: #8D4925;
+}
+
+/*CAPITULOS*/
+.titulo-caps {
+    margin: 20px 100px; /* Añade un margen alrededor del contenedor */
+}
+
+.titulo-caps h1 {
+    color: rgb(163, 179, 108);
+    text-align: left;
+    margin: 0;
+    font-size: 40px;
+}
+
+.titulo-caps img {
+    display: block;
+    margin: 20px 10px; /* Espacio entre el título y la imagen */
+    float: left; /* Alinea la imagen a la izquierda */
+    max-width: 500px; /* Ajusta el tamaño de la imagen si es necesario */
+}
+
+.parrafos {
+    color: rgb(163, 179, 108);
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 10px;
+}
+
+.parrafos p {
+    font-size: 25px; /* Reduce el tamaño de la letra */
+    margin-left: 120px; /* Espacio suficiente para que el párrafo no se superponga con la imagen */
+    line-height: 1.5; /* Mejora la legibilidad */
+}
+/*CAPITULOS*/
+
+/*RESEÑAS*/
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    width: calc(60% - 40px); /* Ajusta el ancho según tu diseño */
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+/*RESEÑAS*/
+
+footer{
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+}
+
 @media (max-width:1300px){
+    .carousel {
+
+        margin-left: 30px; /* Centra el carrusel horizontalmente */
+        
+    }
+
     .logo-bar-img{
         width: 70%;
         height: auto;
@@ -170,9 +399,66 @@ footer{
         flex-direction: column;
         align-items: center;
         clip-path: 0 at center;
-        transition: clip-path 1s ease-in-out;  
+        transition: clip-path 1s ease-in-out;
+        z-index: 1;  
     }
     #menuIcon:not(:checked) + .menu{
         display: none !important;
     }
 }
+
+@media (max-width:480px){
+
+    .card-container {
+
+        margin-left: 0px;
+
+    }
+    .titulo{
+        margin-left: 0px;
+    }
+
+    .carousel {
+
+        margin-left: 5px; /* Centra el carrusel horizontalmente */
+        
+    }
+    
+    .titulo-caps{
+        width: 80%;
+    }
+    .titulo-caps h1 {
+       
+        margin-left: -100px;
+        margin-top: 45px;
+        font-size: 35px;
+    
+    }
+    .titulo-caps img {
+        margin-left: -100px;
+    }
+
+    .parrafos {
+        display: flex;
+        flex-direction: column; /* Coloca los elementos en una columna */
+        
+        
+    }
+
+    .parrafos img {
+        margin: 0 auto 10px auto; /* Centra las imágenes y añade un margen inferior */
+        max-width: 150%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+        height: 300px;
+        width: 500px;
+        margin-left: -100px;
+    }
+
+    .parrafos p {
+        column-count: 2; /* Divide el texto en dos columnas solo en pantallas de hasta 480px */
+        column-gap: 20px; /* Añade un espacio entre las columnas */
+        margin-left: -100px;
+    }
+}
+
+
+

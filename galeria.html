@@ -4,36 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="images/favicon.jpg" type="image/jpg">
-    <title>The Queen's Gambit: Galery</title>
+    <title>The Queen's Gambit: Galería</title>
 </head>
 <body>
     <header>
         <div class="logo-bar">
-            <img src="images/header-image.png" alt="Background">
+            <img class="logo-bar-img" src="images/header-image.png" alt="Background">
         </div>
         <nav id="menu_bar" class="menu_bar">
+            <label for="menuIcon" class="menu_label">
+                <img src="./css/menu.svg" alt="" class="menu-button">
+            </label>
+            <input type="checkbox" id="menuIcon" class="menu_input">
+
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="personajes.html">Personajes</a></li>
-                <li><a href="#">Capítulos</a>
-                    <ul>
-                        <li><a href="">Capítulo I: Aperturas</a></li>
-                        <li><a href="">Capítulo II: Intercambios</a></li>
-                        <li><a href="">Capítulo III: Peones doblados</a></li>
-                        <li><a href="">Capítulo IV: Medio Juego</a></li>
-                        <li><a href="">Capítulo V: Ataque doble</a></li>
-                        <li><a href="">Capítulo VI: Aplazamientos</a></li>
-                        <li><a href="">Capítulo VII: Final del juego</a></li>
-                    </ul>
-                </li>
+                <li ><a href="capitulos.html" class="chapters">Capítulos</a></li>
                 <li><a href="galeria.html">Galería</a></li>
                 <li><a href="resenas.html">Reseñas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-        </nav>
+        </nav> 
     </header>
     
     <div class="container">
@@ -150,11 +144,15 @@
     </div>  
     <footer>
         <div class="social-media-container">
-            <img src="images/facebook.png" alt="Facebook" class="social-media-image">
-            <img src="images/twitter.png" alt="Twitter" class="social-media-image">
-            <img src="images/youtube.png" alt="Youtube" class="social-media-image">
-            <img src="images/instagram-logo.png" alt="Instagram" class="social-media-image">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-media-image"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter" class="social-media-image"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt="Youtube" class="social-media-image"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram-logo.png" alt="Instagram" class="social-media-image"></a>
         </div>
+        <span class="derechos-reservados">
+            ©Todos los derechos reservados. 
+            Esta página junto a su contenido son propiedad intelectual de Gastón García® 
+        </span> 
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

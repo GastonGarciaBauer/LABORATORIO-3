@@ -3,12 +3,11 @@
     padding: 0 ;
     box-sizing: border-box !important;
 }
+
 html, body {
     margin: 0 !important;
     background-color: black !important;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-   
-
 }
 
 ul{
@@ -23,18 +22,24 @@ li a{
     text-decoration: none !important;
     font-weight: bold !important;
     padding-left: 15px !important;
-    /*display: inline-block !important;*/
+    
 }
+
 li a:hover{
     transform: scale(1.2) !important;
     transition-duration: 1000ms !important;
 }
-/* DESPLEGABLE EN EL INDEX*/
+
 .menu{
     list-style: none !important;
     background-color: black !important;
-   
+    width: 80%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:row;
 }
+
 .menu ul{
     display: none !important;
     position: absolute ;
@@ -42,6 +47,7 @@ li a:hover{
     padding: 0 ;
     z-index: 1;
 }
+
 .chapt{
     display: none;
 }
@@ -56,8 +62,6 @@ li a:hover{
     text-decoration: none;
 }
 
-/* DESPLEGABLE EN EL INDEX*/
-
 .principal {
 
     height: 70vh !important;
@@ -66,6 +70,7 @@ li a:hover{
     justify-content: center;
     align-items: center;
 }
+
 .bg-img {
     max-width: 100%;
     max-height: 100%;
@@ -74,27 +79,33 @@ li a:hover{
 
 .menu_bar{ 
     background-color: black !important;
-    margin-right: 20px !important; 
+    margin-right: 0px !important; 
+}
+
+.home-icon{
+    width: 120px; /* Ajusta el tamaño según tus necesidades */
+    height: auto;
 }
 
 .logo-bar{
-    width: 120% !important;
+    /*width: 120% !important;
     height: 12vh !important;
-    background-color: #8D4925 !important;
+    
     display: flex !important;
     align-content: center !important;
-    justify-content: center !important;
+    justify-content: center !important;*/
+    display: flex;
+    background-color: #8D4925 !important;
+    align-items: center;
 }
+
 .menu-button, #menu, .menu_input{
     display: none;
 }
 
-
-
 #desplegable {
     display: none;
     position: absolute;
-    /* Otras propiedades de estilo para el menú desplegable */
 }
 
 .social-media-container{
@@ -113,6 +124,7 @@ li a:hover{
     height: auto;
     color: #8D4925;    
 }
+
 .social-media-image{
     width: 40px;
     height: auto;
@@ -123,7 +135,7 @@ li a:hover{
     font-size: 1.2em;
     margin-top: 60px;
     text-align: center;
-    opacity: 0.8; /* Oculto inicialmente para animar su aparición */
+    opacity: 0.8;
     transition-duration: 20s;
     text-shadow: 
         -1px -1px 0 black,  
@@ -147,29 +159,30 @@ li a:hover{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Ajusta el espacio entre las imágenes según tus necesidades */
+    gap: 20px;
     width: 100%;
     max-width: 80vw;
-    justify-content: center; /* Centra la galería si es necesario */
+    justify-content: center;
     align-items: center;
 	margin: auto;
 }
+
 .gallery img {
-    /*flex-basis: calc(25% - 100px);  Ajusta el 25% menos el gap para asegurar que se ajuste correctamente */
+    
     border-radius: 7%;
-	transform: scale(0.8);  /*Reduce el tamaño de las imágenes al 80% de su tamaño original */
-    transition: transform 0.3s ease-in-out;  /*Agrega una transición suave */
+	transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
 }
+
 .img{
     
     width: 300px;
     height: auto;
-
 }
+
 #overlay {
     display: none;
     position: fixed;
@@ -181,9 +194,10 @@ li a:hover{
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
-    flex-direction: column; /* Para alinear la imagen y la leyenda verticalmente */
+    overflow: hidden;
+    flex-direction: column;
 }
+
 #overlay img {
     max-width: 50%;
     max-height: 50%;
@@ -191,31 +205,33 @@ li a:hover{
 }
 
 .expanded-img {
-    transform: scale(0.8); /* Tamaño inicial más pequeño */
+    transform: scale(0.8);
 }
 
 .expanded-img.expanded {
-    transform: scale(2); /* Tamaño expandido */
+    transform: scale(2);
     max-width: 90%;
     max-height: 90%;
 }
+
 .container {
     margin: 50px;
+    margin-left: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%; /* Ajusta esta anchura según tus necesidades */
+    width: 80%;
 }
 
 .gallery img:hover {
-    transform: scale(1); /* Opcional: para que las imágenes vuelvan a su tamaño original al pasar el cursor */
+    transform: scale(1);
 }
 
 .titulo{
     font-size: 40px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 300px;
+    margin-left: 125px;
     color: white;
 }
 
@@ -243,10 +259,10 @@ li a:hover{
 }
 
 .carousel {
-    width: 150%; /* Ajusta la anchura del carrusel según tus necesidades */
-    max-width: 800px; /* Puedes ajustar este valor para limitar el tamaño máximo del carrusel */
-    margin-left: 200px; /* Centra el carrusel horizontalmente */
-    position: relative; /* Necesario para el posicionamiento absoluto de los elementos */
+    width: 150%; 
+    max-width: 800px;
+    margin-left: 200px; 
+    position: relative; 
     margin-left: 30px;
 }
 
@@ -256,7 +272,7 @@ li a:hover{
     justify-content: center;
     align-items: center;
     user-select: none;
-    width: 50%; /* Ajusta esta anchura según tus necesidades */
+    width: 50%;
     height: 110%;
     position: absolute;
 }
@@ -267,7 +283,7 @@ li a:hover{
     object-fit: cover;
     position: absolute;
     top: 0px;
-    left: -50px;
+    left: -125px;
     z-index: -1;
     border-radius: 15px;
 }
@@ -282,7 +298,7 @@ li a:hover{
 
 /*CAPITULOS*/
 .titulo-caps {
-    margin: 20px 100px; /* Añade un margen alrededor del contenedor */
+    margin: 20px 100px;
 }
 
 .titulo-caps h1 {
@@ -294,9 +310,9 @@ li a:hover{
 
 .titulo-caps img {
     display: block;
-    margin: 20px 10px; /* Espacio entre el título y la imagen */
-    float: left; /* Alinea la imagen a la izquierda */
-    max-width: 500px; /* Ajusta el tamaño de la imagen si es necesario */
+    margin: 20px 10px;
+    float: left;
+    max-width: 500px;
 }
 
 .parrafos {
@@ -307,9 +323,9 @@ li a:hover{
 }
 
 .parrafos p {
-    font-size: 25px; /* Reduce el tamaño de la letra */
-    margin-left: 120px; /* Espacio suficiente para que el párrafo no se superponga con la imagen */
-    line-height: 1.5; /* Mejora la legibilidad */
+    font-size: 25px;
+    margin-left: 120px;
+    line-height: 1.5;
 }
 /*CAPITULOS*/
 
@@ -331,7 +347,7 @@ li a:hover{
     border-radius: 8px;
     overflow: hidden;
     margin: 20px;
-    width: calc(60% - 40px); /* Ajusta el ancho según tu diseño */
+    width: calc(60% - 40px);
     padding: 20px;
     transition: transform 0.3s ease;
 }
@@ -353,6 +369,137 @@ li a:hover{
 }
 /*RESEÑAS*/
 
+/*CONTACTO*/
+.contenido {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.ul-contenido {
+    list-style: none;
+    padding: 0;
+}
+
+#informacion{
+    margin-top: 100px;
+}
+
+#derechos{
+    margin-top: 150px;
+}
+
+.logo-contacto {
+    text-align: center;
+    font-size: 3em;
+    color: white;
+}
+
+.logo-contacto span {
+    color: #8D4925;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 #8D4925;
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.form-contacto {
+    background: #222222;
+}
+
+.form-contacto form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-contacto form label {
+    display: block;
+    color:white;
+}
+
+.form-contacto form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.form-contacto form .bloque-texto {
+    grid-column: 1 / 3;
+}
+
+.form-contacto form button,
+.form-contacto form input,
+.form-contacto form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid #8D4925;
+}
+
+.form-contacto form button {
+    background: linear-gradient(45deg, #8D4925, #b48f67);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    transition: background 0.5s ease-in-out;
+}
+
+.form-contacto form button:hover,
+.form-contacto form button:focus {
+    background: linear-gradient(45deg, black, #8D4925);
+    color: #fff;
+    transition: background 0.5s ease-in-out;
+    outline: 0;
+}
+
+.info-contacto {
+    background: #000;
+    color: white;
+}
+
+.info-contacto h4, .info-contacto ul, .info-contacto p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.checkbox-container {
+    font-size: 16px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .info-contacto h4,
+    .info-contacto ul,
+    .info-contacto p {
+        text-align: left;
+    }
+}
+
+
+/*CONTACTO*/
+
 footer{
 	display: flex;
     flex-direction: column;
@@ -361,23 +508,28 @@ footer{
 	height: 150px;
 }
 
-@media (max-width:1300px){
+@media (max-width:1299px){
+    
     .carousel {
-
-        margin-left: 30px; /* Centra el carrusel horizontalmente */
-        
+        margin-left: 30px; 
     }
 
     .logo-bar-img{
+        /*
         width: 70%;
+        height: auto;*/
+        flex-grow: 1;
+        max-width: 100%;
         height: auto;
     }
+
     .social-media-container{
         height: auto;
         display: flex;
         justify-content:space-around;
         align-items:center;
     }
+
     .social-media-image{
         width: 30px;
         height: auto;
@@ -388,10 +540,7 @@ footer{
         cursor: pointer;
     }
 
-    #menuIcon:checked + .menu{
-        display: block;
-        position: fixed;
-        background: red;
+    /*#menuIcon:checked + .menu{
         width: 100%;
         left: 0;
         display: flex;
@@ -400,8 +549,8 @@ footer{
         align-items: center;
         clip-path: 0 at center;
         transition: clip-path 1s ease-in-out;
-        z-index: 1;  
-    }
+    }*/
+
     #menuIcon:not(:checked) + .menu{
         display: none !important;
     }
@@ -409,54 +558,96 @@ footer{
 
 @media (max-width:480px){
 
-    .card-container {
-
-        margin-left: 0px;
-
+    .logo-bar-img{
+        /*
+        width: 70%;
+        height: auto;*/
+        flex-grow: 1;
+        max-width: 30%;
+        height: auto;
     }
+    .logo-bar{
+        width: 150% !important;
+        height: 6vh !important;
+        /*
+        display: flex !important;
+        align-content: center !important;
+        justify-content: center !important;*/
+        display: flex;
+        background-color: #8D4925 !important;
+        align-items: center;
+    }
+
+    
+.menu{
+    list-style: none !important;
+    background-color: black !important;
+
+    display: block;
+    position: fixed;
+    width: 70%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    align-items: center;
+    clip-path: 0 at center;
+    transition: clip-path 1s ease-in-out;
+    z-index: 1;  
+}
+    .home-icon{
+        width: 150px;
+        padding-right: 100px;
+    }
+    .card-container {
+        margin-left: 0px;
+    }
+
     .titulo{
         margin-left: 0px;
     }
 
     .carousel {
-
-        margin-left: 5px; /* Centra el carrusel horizontalmente */
-        
+        margin-left: 5px;
     }
     
     .titulo-caps{
         width: 80%;
     }
+
     .titulo-caps h1 {
        
         margin-left: -100px;
         margin-top: 45px;
         font-size: 35px;
-    
     }
+
     .titulo-caps img {
         margin-left: -100px;
     }
 
     .parrafos {
         display: flex;
-        flex-direction: column; /* Coloca los elementos en una columna */
-        
-        
+        flex-direction: column;   
     }
 
     .parrafos img {
-        margin: 0 auto 10px auto; /* Centra las imágenes y añade un margen inferior */
-        max-width: 150%; /* Asegura que las imágenes no excedan el ancho del contenedor */
+        margin: 0 auto 10px auto; 
+        max-width: 150%;
         height: 300px;
         width: 500px;
         margin-left: -100px;
     }
 
     .parrafos p {
-        column-count: 2; /* Divide el texto en dos columnas solo en pantallas de hasta 480px */
-        column-gap: 20px; /* Añade un espacio entre las columnas */
+        column-count: 2; 
+        column-gap: 20px;
         margin-left: -100px;
+    }
+
+
+    footer{
+        height: 200px;
     }
 }
 
